@@ -1,0 +1,16 @@
+package asos.selenium.urbanovych.pom.base;
+
+import org.openqa.selenium.WebDriver;
+
+public class BasePage {
+
+    protected WebDriver driver;
+
+    public BasePage(WebDriver driver) {
+        this.driver = driver;
+    }
+
+    public void load(String endpoint) {
+        driver.get("https://www.asos.com" + endpoint);
+    }
+}
